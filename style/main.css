@@ -308,8 +308,22 @@ header .menu_excondido ul li a:hover {
   left: 0.25rem;
 }
 
-#cards {
+#secundary {
   background-color: rgb(5, 23, 126);
   width: 100%;
   height: 100vh;
+}
+#secundary .sec-div {
+  display: flex;
+  flex-direction: row-reverse;
+}
+#secundary .sec-div .lua-div img {
+  width: 45rem;
+  filter: drop-shadow(-1rem 0.4rem 0.4rem rgba(255, 255, 255, 0.466));
+}
+#secundary .sec-div .textLua-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */
