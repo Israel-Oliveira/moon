@@ -1,0 +1,407 @@
+@charset "UTF-8";
+:root {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: "DM Sans", sans-serif;
+  background-color: rgb(5, 23, 126);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1124px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #000038;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+header .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo img {
+  width: 9rem;
+  padding: 1rem;
+  margin-left: 2rem;
+  filter: drop-shadow(-0.4rem 0.4rem 0.4rem white);
+}
+header .menu ul {
+  display: flex;
+  gap: 2rem;
+  margin-right: 2rem;
+}
+header .menu ul li a {
+  color: white;
+  padding-inline: 1.5rem;
+  padding-bottom: 3.2rem;
+  border-bottom: 0.5rem solid transparent;
+  transition: all 500ms;
+}
+header .menu ul li a:hover {
+  color: yellow;
+  border-color: yellow;
+}
+header .menu_excondido ul {
+  display: flex;
+  gap: 2rem;
+  margin-right: 2rem;
+}
+header .menu_excondido ul li a {
+  color: white;
+  padding-inline: 1.5rem;
+  padding-bottom: 3.2rem;
+  border-bottom: 0.5rem solid transparent;
+  transition: all 500ms;
+}
+header .menu_excondido ul li a:hover {
+  color: yellow;
+  border-color: yellow;
+}
+
+@media (max-width: 600px) {
+  header .position {
+    margin-right: 6rem;
+  }
+  header .menu_excondido {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000038;
+  }
+  header .menu_excondido ul {
+    flex-direction: column;
+    gap: 4rem;
+    text-align: center;
+  }
+  header .menu_excondido ul li a {
+    padding-inline: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.5rem solid transparent;
+  }
+  header .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000038;
+    display: none;
+  }
+  header .menu ul {
+    flex-direction: column;
+    gap: 4rem;
+    text-align: center;
+  }
+  header .menu ul li a {
+    padding-inline: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.5rem solid transparent;
+  }
+}
+/*Item do menu mobile*/
+#checkbox {
+  display: none;
+}
+
+.position {
+  display: none;
+}
+
+.hamburger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.line {
+  position: absolute;
+  width: 30px;
+  /*Altero o tamanho da linha superior e inferior*/
+}
+
+.line-main::before, .line-main::after,
+.line-split::before, .line-split::after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: 3px; /*AUMENTA A LARGURA DAS LINHAS*/
+  background-color: #fff;
+}
+
+.line-main::before {
+  transform: translateY(-11px); /* AUMENTA A DISTANCIA ENTRE AS LINHAS*/
+}
+
+.line-main::after {
+  transform: translateY(11px); /* AUMENTA A DISTANCIA ENTRE AS LINHAS*/
+}
+
+.line-split::before,
+.line-split::after {
+  width: 15px; /*AUMENTA O TAMANHO DA LINHA DO MEIO*/
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.line-split::after {
+  transform: translateX(15px); /* A distancia da linha centrar AFTER ou a que está a direira*/
+}
+
+#checkbox:checked ~ .line-main::before {
+  transform: rotate(45deg);
+}
+
+#checkbox:checked ~ .line-main::after {
+  transform: rotate(-45deg);
+}
+
+#checkbox:checked ~ .line-split::before {
+  transform: translateX(-10px); /* AUMENTA A DISTANCIA DAS LINHAS CENTRAIS QUANDO SOMEM*/
+  opacity: 0;
+}
+
+#checkbox:checked ~ .line-split::after {
+  transform: translateX(20px); /* AUMENTA A DISTANCIA DAS LINHAS CENTRAIS QUANDO SOMEM*/
+  opacity: 0;
+}
+
+@media (max-width: 600px) {
+  .position {
+    display: block;
+  }
+}
+@-webkit-keyframes animate {
+  0% {
+    transform: translateY(170vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(0.5);
+  }
+}
+@keyframes animate {
+  0% {
+    transform: translateY(170vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(0.5);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.boxAnimation {
+  position: relative;
+  width: 100%;
+  height: 150%;
+  overflow: hidden;
+}
+
+.bubbles {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.bubbles span {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(152, 253, 253, 0.87);
+  margin: 0 0.4rem;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1rem rgb(134, 255, 255), 0 0 5rem rgba(152, 253, 253, 0.87), 0 0 10rem rgba(152, 253, 253, 0.87);
+  -webkit-animation: animate 15s linear infinite;
+          animation: animate 15s linear infinite;
+  -webkit-animation-duration: calc(100s / var(--i));
+          animation-duration: calc(100s / var(--i));
+}
+.bubbles span:nth-child(even) {
+  background-color: #dafbff;
+  box-shadow: 0 0 0 1rem #ffffff, 0 0 5rem #dafbff, 0 0 10rem #dafbff;
+}
+
+section {
+  margin-top: 10rem;
+  height: 100vh;
+}
+section .formulario {
+  position: absolute;
+  top: 15rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .formulario h2 {
+  color: yellow;
+  margin-bottom: 2rem;
+}
+section .formulario h2:nth-child(2) {
+  margin-bottom: 0.5rem;
+}
+section .formulario .boxform {
+  margin: 1.6rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 40rem;
+  border-radius: 2rem;
+  background-color: rgba(255, 255, 255, 0.048);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+section .formulario .boxform form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+section .formulario .boxform form .dados,
+section .formulario .boxform form .endereco {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+section .formulario .boxform form .dados .input-group,
+section .formulario .boxform form .endereco .input-group {
+  position: relative;
+}
+section .formulario .boxform form .dados .input,
+section .formulario .boxform form .endereco .input {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.4rem;
+  color: white;
+  background-color: #000038;
+  outline: 2px solid white;
+}
+section .formulario .boxform form .dados .input-label,
+section .formulario .boxform form .endereco .input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(1rem, 1rem);
+  transform-origin: left;
+  transition: transform 0.25s;
+  color: white;
+}
+section .formulario .boxform form .dados .input:focus + .input-label,
+section .formulario .boxform form .dados .input:valid + .input-label,
+section .formulario .boxform form .endereco .input:focus + .input-label,
+section .formulario .boxform form .endereco .input:valid + .input-label {
+  transform: translate(0, -1.9rem) scale(0.8);
+  color: rgb(134, 255, 255);
+}
+section .formulario .boxform form .dados .input:is(:focus, :valid),
+section .formulario .boxform form .endereco .input:is(:focus, :valid) {
+  outline-color: aqua;
+}
+section .formulario .boxform form .dados .inputBox,
+section .formulario .boxform form .endereco .inputBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+section .formulario .boxform form .dados .inputBox label:nth-child(1),
+section .formulario .boxform form .endereco .inputBox label:nth-child(1) {
+  transform: translate(0, -1.9rem) scale(0.8);
+  color: rgb(134, 255, 255);
+}
+section .formulario .boxform form .dados .inputBox .input-group:nth-child(1) {
+  width: 59%;
+}
+section .formulario .boxform form .dados .inputBox .input-group:nth-child(2) {
+  width: 40%;
+  border-radius: 0.4rem;
+  outline: 2px solid white;
+}
+section .formulario .boxform form .endereco .inputBox .input-group:nth-child(1) {
+  width: 30%;
+}
+section .formulario .boxform form .endereco .inputBox .input-group:nth-child(2) {
+  width: 69%;
+}
+section .formulario .boxform form button {
+  width: 30%;
+  margin: 0 auto;
+  text-decoration: none;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  outline: 2px solid white;
+  padding: 1rem 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.5s;
+}
+section .formulario .boxform form button:hover {
+  color: rgba(152, 253, 253, 0.87);
+  outline-color: rgba(152, 253, 253, 0.87);
+  cursor: pointer;
+}
+section .formulario .boxform form button:hover::before {
+  width: 160%;
+}
+section .formulario .boxform form button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -5rem;
+  width: 0;
+  height: 100%;
+  background-color: #000038;
+  transform: skew(35deg);
+  z-index: -1;
+  transition: width 1s;
+}
+
+footer {
+  width: 100%;
+  height: 20rem;
+}/*# sourceMappingURL=contato.css.map */

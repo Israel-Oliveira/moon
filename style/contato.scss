@@ -1,0 +1,187 @@
+@import './scss/variables';
+@import './scss/config';
+
+@import './scss/header';
+
+@import './scss/backgroundAnimado';
+
+section{
+  margin-top: 10rem;
+
+  height: 100vh;
+
+  .formulario{
+    position: absolute;
+    top: 15rem;
+
+    width: 100%;
+    height: 100%;
+
+    // background-color: rgba(0, 128, 0, 0.253);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2{
+      color: $txtY;
+
+      margin-bottom: 2rem;
+
+      &:nth-child(2){
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    
+    .boxform{
+
+      margin: 1.6rem;
+      padding: 2rem;
+      width: 100%;
+      max-width: 40rem;
+      border-radius: 2rem;
+
+      background-color: $backFormulario;
+      backdrop-filter: blur(2px);
+
+
+
+      form{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+
+        .dados,
+        .endereco{
+
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+
+          .input-group{
+            position: relative;
+          }
+
+          .input{
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 0.4rem;
+
+            color: $formtxt;
+            background-color: $primaryColor;
+
+            outline: 2px solid $formtxt;
+          }
+
+          .input-label{
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            transform: translate(1rem, 1rem);
+            transform-origin: left;
+            transition: transform 0.25s;
+
+            color: $formtxt;
+
+          }
+
+          .input:focus+.input-label,
+          .input:valid+.input-label{
+            transform: translate(0, -1.9rem) scale(0.8);
+            color: $shadowb1;
+          }
+
+          .input:is(:focus, :valid){
+            outline-color: aqua;
+          }
+          
+          .inputBox{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 1rem;
+            label:nth-child(1){
+              transform: translate(0, -1.9rem) scale(0.8);
+              color: $shadowb1;
+            }
+          }
+        }
+        .dados .inputBox{
+          .input-group:nth-child(1){
+            width: 59%;
+          }
+          
+          .input-group:nth-child(2){
+            width: 40%;
+            border-radius: 0.4rem;
+            outline: 2px solid $formtxt;
+          }
+        }
+
+        .endereco .inputBox{
+          .input-group:nth-child(1){
+            width: 30%;
+          }
+          
+          .input-group:nth-child(2){
+            width: 69%;
+          }
+        }
+
+        button{
+          width: 30%;
+          margin: 0 auto;
+
+          text-decoration: none;
+          border: none;
+          text-transform: uppercase;
+          letter-spacing: 0.2rem;
+
+          background-color: transparent;
+          color: $txtW;
+          font-weight: bold;
+          outline: 2px solid $txtW;
+
+          padding: 1rem 1rem;
+          position: relative;
+          overflow: hidden;
+          transition: color 0.5s;
+
+          &:hover{
+            color: $bols1;
+            outline-color: $bols1;
+
+            cursor: pointer;
+
+            &::before{
+              width: 160%;
+            }
+          }
+
+          &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -5rem;
+            width: 0;
+            height: 100%;
+
+            background-color: $primaryColor;
+            transform: skew(35deg);
+            z-index: -1;
+            transition: width 1s;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+@import './scss/footer'

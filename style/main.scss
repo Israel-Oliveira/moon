@@ -1,0 +1,116 @@
+
+@import './scss/variables';
+@import './scss/config';
+
+@import './scss/header';
+
+@import './scss/animacoes';
+
+#principal{
+  margin-top: 9.5rem;
+
+  .backg-moon{
+    background-image: url(../img/backg-main.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+
+    background-attachment: fixed;
+    position: relative;
+    z-index: -2;
+
+    width: 100%;
+    height: 50rem;
+
+    main{
+      .box{
+        height: 31.25rem;
+        width: 31.25rem;
+        position: fixed;
+        z-index: -1;
+
+        transform: translate(-50%, -50%);
+
+        top: 50%;
+        left: 50%;
+        color: $branco;
+      }
+
+      p.letra{
+        font-size: 3.5rem;
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+      }
+
+      .letra-m{
+        left: 0.2rem;
+      }
+
+      .letra-n{
+        right: 0.2rem;
+      }
+
+      .moon{
+        background-color: #f5f5f5;
+        height: 8rem;
+        width: 8rem;
+
+        border-radius: 50%;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+
+        box-shadow: 0 0 0 0.6rem
+        rgba(255, 255, 255, 0.356),
+        0 0 0 1.2rem rgba(255, 255, 255, 0.164),
+        0 0 0 1.8rem rgba(255, 255, 255, 0.137);
+
+        &::after{
+          position: absolute;
+          content: "";
+          background-color: #dfdfdf;
+
+          height: 0.9rem;
+          width: 0.9rem;
+          border-radius: 50%;
+
+          top: 3.75rem;
+          left: 1.25rem;
+
+          box-shadow: 0.9rem -2.1rem 0 0.2rem #dfdfdf,
+          1.5rem -0.3rem 0 -0.06rem #dfdfdf;
+        }
+      }
+
+      .orbit{
+        height: 18.75rem;
+        width: 18.75rem;
+        border-radius: 50%;
+
+        position: absolute;
+
+        left: -5.2rem;
+        bottom: -5.2rem;
+
+        animation: spin 8s infinite linear;
+
+        p{
+          position: absolute;
+          font-size: 3.5rem;
+          top: .25rem;
+          left: .25rem;
+        }
+      }
+    }
+  }
+}
+
+#cards{
+  background-color: $secundaryColor;
+  width: 100%;
+  height: 100vh;
+}

@@ -1,0 +1,43 @@
+@import './animacoes';
+
+.boxAnimation{
+  position: relative;
+
+  width: 100%;
+  height: 150%;
+
+  overflow: hidden;
+}
+
+.bubbles{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+  span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+
+    background-color: $bols1;
+
+    margin: 0 0.4rem;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 1rem $shadowb1,
+    0 0 5rem $bols1,
+    0 0 10rem $bols1;
+
+    animation: animate 15s linear infinite;
+    animation-duration: calc(100s / var(--i));
+
+    &:nth-child(even){
+      background-color: $bols2;
+
+      box-shadow: 0 0 0 1rem $shadowb2,
+      0 0 5rem $bols2,
+      0 0 10rem $bols2;
+    }
+  }
+}

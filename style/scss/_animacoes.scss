@@ -1,0 +1,20 @@
+//Animação backgroun animado - PÀGINA DE CONTATO
+
+@keyframes animate{
+  0%{
+    transform: translateY(170vh) scale(0);
+  }
+
+  100%{
+    transform: translateY(-10vh) scale(0.5);
+  }
+}
+
+
+//Animação da lua - PÁGINA HOME
+
+@keyframes spin {
+  100%{
+    transform: rotate(360deg);
+  }
+}

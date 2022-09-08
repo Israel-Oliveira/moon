@@ -1,0 +1,77 @@
+
+/*Item do menu mobile*/
+
+
+#checkbox{
+  display: none;
+}
+
+.position{
+  display: none;
+}
+
+.hamburger{
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+
+}
+
+.line{
+  position: absolute;
+  width: 30px;
+  /*Altero o tamanho da linha superior e inferior*/
+}
+
+.line-main::before,.line-main::after,
+.line-split::before,.line-split::after{
+  content: '';
+  position: absolute;
+  width: inherit;
+  height: 3px;/*AUMENTA A LARGURA DAS LINHAS*/
+  background-color: #fff;
+}
+
+.line-main::before{
+  transform: translateY(-11px);/* AUMENTA A DISTANCIA ENTRE AS LINHAS*/
+}
+
+.line-main::after{
+  transform: translateY(11px);/* AUMENTA A DISTANCIA ENTRE AS LINHAS*/
+}
+
+.line-split::before,
+.line-split::after{
+  width: 15px;/*AUMENTA O TAMANHO DA LINHA DO MEIO*/
+  transition: transform .5s, opacity .5s;
+}
+
+.line-split::after{
+  transform: translateX(15px);/* A distancia da linha centrar AFTER ou a que está a direira*/
+}
+
+#checkbox:checked~.line-main::before{
+  transform: rotate(45deg);
+}
+
+#checkbox:checked~.line-main::after{
+  transform: rotate(-45deg);
+}
+
+#checkbox:checked~.line-split::before{
+  transform: translateX(-10px);/* AUMENTA A DISTANCIA DAS LINHAS CENTRAIS QUANDO SOMEM*/
+  opacity: 0;
+}
+
+#checkbox:checked~.line-split::after{
+  transform: translateX(20px);/* AUMENTA A DISTANCIA DAS LINHAS CENTRAIS QUANDO SOMEM*/
+  opacity: 0;
+}
+
+@media (max-width:600px){
+  .position{
+    display: block;
+  }
+}

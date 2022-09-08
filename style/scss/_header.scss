@@ -1,0 +1,146 @@
+
+header{
+  background-color: $primaryColor;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  z-index: 10;
+
+  .logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img{
+      width: 9rem;
+      padding: 1rem;
+
+      margin-left: 2rem;
+
+      filter: drop-shadow(-0.4rem .4rem .4rem $txtW);
+    }
+  }
+
+  .menu {
+    ul{
+      display: flex;
+      gap: 2rem;
+
+      margin-right: 2rem;
+
+      li{
+        a{
+          color: $txtW;
+
+          padding-inline: 1.5rem;
+          padding-bottom: 3.2rem;
+          border-bottom: 0.5rem solid transparent;
+
+          transition: all 500ms;
+
+          &:hover{
+            color: $txtY;
+            border-color: $txtY;
+          }
+        }
+      }
+    }
+  }
+
+  .menu_excondido {
+    ul{
+      display: flex;
+      gap: 2rem;
+
+      margin-right: 2rem;
+
+      li{
+        a{
+          color: $txtW;
+
+          padding-inline: 1.5rem;
+          padding-bottom: 3.2rem;
+          border-bottom: 0.5rem solid transparent;
+
+          transition: all 500ms;
+
+          &:hover{
+            color: $txtY;
+            border-color: $txtY;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:600px){
+  header{
+    .position{
+      margin-right: 6rem;
+    }
+
+    .menu_excondido{
+      position: fixed;
+        top: 0;
+        left: 0;
+
+        
+        width: 80%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: $primaryColor;
+
+        ul{
+          flex-direction: column;
+          gap: 4rem;
+
+          text-align: center;
+          li a{
+            padding-inline: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 0.5rem solid transparent;
+          }
+        }
+      
+    }
+      .menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        
+        width: 80%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: $primaryColor;
+
+        display: none;
+
+        ul{
+          flex-direction: column;
+          gap: 4rem;
+
+          text-align: center;
+          li a{
+
+            padding-inline: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 0.5rem solid transparent;
+          }
+        }
+      }
+  }
+}
+
+@import './menuComponent';
