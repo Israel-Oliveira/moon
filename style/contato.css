@@ -16,7 +16,7 @@ body {
   height: 100vh;
   font-size: 1.6rem;
   font-family: "DM Sans", sans-serif;
-  background-color: rgb(5, 23, 126);
+  background-color: rgb(15, 83, 95);
 }
 
 ul {
@@ -34,11 +34,14 @@ a {
 }
 
 header {
-  background-color: #000038;
+  background-color: rgba(247, 247, 247, 0.1098039216);
   position: fixed;
   top: 0;
   width: 100%;
+  -webkit-backdrop-filter: blur(0.5rem);
+          backdrop-filter: blur(0.5rem);
   z-index: 10;
+  border-radius: 0 0 3rem 3rem;
 }
 header .logo {
   display: flex;
@@ -49,7 +52,7 @@ header .logo img {
   width: 9rem;
   padding: 1rem;
   margin-left: 2rem;
-  filter: drop-shadow(-0.4rem 0.4rem 0.4rem white);
+  filter: grayscale(10);
 }
 header .menu ul {
   display: flex;
@@ -57,7 +60,7 @@ header .menu ul {
   margin-right: 2rem;
 }
 header .menu ul li a {
-  color: white;
+  color: rgb(255, 255, 255);
   padding-inline: 1.5rem;
   padding-bottom: 3.2rem;
   border-bottom: 0.5rem solid transparent;
@@ -73,7 +76,7 @@ header .menu_excondido ul {
   margin-right: 2rem;
 }
 header .menu_excondido ul li a {
-  color: white;
+  color: rgb(255, 255, 255);
   padding-inline: 1.5rem;
   padding-bottom: 3.2rem;
   border-bottom: 0.5rem solid transparent;
@@ -97,7 +100,7 @@ header .menu_excondido ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000038;
+    background-color: rgba(247, 247, 247, 0.1098039216);
   }
   header .menu_excondido ul {
     flex-direction: column;
@@ -118,7 +121,7 @@ header .menu_excondido ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000038;
+    background-color: rgba(247, 247, 247, 0.1098039216);
     display: none;
   }
   header .menu ul {
@@ -313,7 +316,7 @@ section .formulario .boxform form .endereco .input {
   border: none;
   border-radius: 0.4rem;
   color: white;
-  background-color: #000038;
+  background-color: rgba(247, 247, 247, 0.1098039216);
   outline: 2px solid white;
 }
 section .formulario .boxform form .dados .input-label,
@@ -372,9 +375,9 @@ section .formulario .boxform form button {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   background-color: transparent;
-  color: white;
+  color: rgb(255, 255, 255);
   font-weight: bold;
-  outline: 2px solid white;
+  outline: 2px solid rgb(255, 255, 255);
   padding: 1rem 1rem;
   position: relative;
   overflow: hidden;
@@ -395,7 +398,7 @@ section .formulario .boxform form button::before {
   left: -5rem;
   width: 0;
   height: 100%;
-  background-color: #000038;
+  background-color: rgba(247, 247, 247, 0.1098039216);
   transform: skew(35deg);
   z-index: -1;
   transition: width 1s;
