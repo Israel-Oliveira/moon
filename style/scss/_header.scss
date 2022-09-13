@@ -10,7 +10,6 @@ header{
 
   z-index: 10;
 
-  border-radius: 0 0 3rem 3rem;
   .logo{
     display: flex;
     justify-content: space-between;
@@ -80,9 +79,16 @@ header{
 }
 
 @media (max-width:600px){
+  .hd-expanded{
+    background-color: transparent;
+    backdrop-filter: blur(0rem);
+  }
   header{
+    height: 9rem;
     .position{
-      margin-right: 6rem;
+      position: fixed;
+      top: 3rem;
+      right: 4rem;
     }
 
     .menu_excondido{
@@ -143,6 +149,11 @@ header{
           }
         }
       }
+    .logo-expanded{
+      img{
+        display: none;
+      }
+    }
   }
 }
 

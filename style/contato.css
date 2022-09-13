@@ -41,7 +41,6 @@ header {
   -webkit-backdrop-filter: blur(0.5rem);
           backdrop-filter: blur(0.5rem);
   z-index: 10;
-  border-radius: 0 0 3rem 3rem;
 }
 header .logo {
   display: flex;
@@ -88,8 +87,18 @@ header .menu_excondido ul li a:hover {
 }
 
 @media (max-width: 600px) {
+  .hd-expanded {
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(0rem);
+            backdrop-filter: blur(0rem);
+  }
+  header {
+    height: 9rem;
+  }
   header .position {
-    margin-right: 6rem;
+    position: fixed;
+    top: 3rem;
+    right: 4rem;
   }
   header .menu_excondido {
     position: fixed;
@@ -133,6 +142,9 @@ header .menu_excondido ul li a:hover {
     padding-inline: 1.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 0.5rem solid transparent;
+  }
+  header .logo-expanded img {
+    display: none;
   }
 }
 /*Item do menu mobile*/
