@@ -339,7 +339,8 @@ header .menu_excondido ul li a:hover {
   margin-top: 8rem;
 }
 #secundary .sec-div .lua-div img {
-  width: 45rem;
+  max-width: 45rem;
+  width: 100%;
   filter: drop-shadow(-1rem 0.4rem 0.4rem rgba(255, 255, 255, 0.466));
 }
 #secundary .sec-div .textLua-div {
