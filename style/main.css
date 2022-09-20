@@ -329,10 +329,12 @@ header .menu_excondido ul li a:hover {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-evenly;
+  padding-inline: 2rem;
 }
 @media (max-width: 60rem) {
   #secundary .sec-div {
     flex-direction: column;
+    align-items: center;
   }
 }
 #secundary .sec-div .lua-div {

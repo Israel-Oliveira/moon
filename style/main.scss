@@ -118,8 +118,11 @@
     flex-direction: row-reverse;
     justify-content: space-evenly;
 
+    padding-inline: 2rem;
+
     @media (max-width:60rem){
       flex-direction: column;
+      align-items: center;
     }
 
     .lua-div{
