@@ -1,4 +1,97 @@
 footer{
   width: 100%;
-  height: 20rem;
+  background-color: $secundaryColor;
+
+  padding-top: 10rem;
+  padding-bottom: 3rem;
+  padding-inline: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+  .container{
+    width: 100%;
+    height: 100%;
+
+  }
+
+  .top{
+    width: 100%;
+    height: 20rem;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  
+    .paginas-footer,
+    .links-externos,
+    .logo-footer{
+      height: 100%;
+      background-color: $secundaryColor;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin: 0 auto;
+    }
+    .logo-footer{
+      width: 35rem;
+      img{
+        width: 40%;
+      }
+    }
+
+    .paginas-footer{
+      flex-direction: column;
+      align-items: flex-start;
+      width: 20rem;
+      
+      
+
+      h3{
+        color: $txtY;
+        margin-bottom: 2rem;
+      }
+
+      a{
+        color: $txtW;
+        line-height: 1.5;
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .links-externos{
+      width: 30rem;
+
+      ul{
+        display: flex;
+        gap: 3rem;
+      }
+
+      img{
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+
+        background-color: red;
+      }
+    }
+
+    .bottom{
+      width: 100%;
+      height: 10%;
+    
+      text-align: center;
+      color: $txtY;
+    }
+  }
+
 }
+
+

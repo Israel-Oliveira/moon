@@ -40,7 +40,7 @@ header {
   width: 100%;
   -webkit-backdrop-filter: blur(0.5rem);
           backdrop-filter: blur(0.5rem);
-  z-index: 10;
+  z-index: 100;
 }
 header .logo {
   display: flex;
@@ -278,6 +278,7 @@ header .menu_excondido ul li a:hover {
 
 section {
   margin-top: 10rem;
+  margin-bottom: 10rem;
   height: 100vh;
 }
 section .formulario {
@@ -418,5 +419,73 @@ section .formulario .boxform form button::before {
 
 footer {
   width: 100%;
+  background-color: rgb(15, 83, 95);
+  padding-top: 10rem;
+  padding-bottom: 3rem;
+  padding-inline: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer .container {
+  width: 100%;
+  height: 100%;
+}
+footer .top {
+  width: 100%;
   height: 20rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+footer .top .paginas-footer,
+footer .top .links-externos,
+footer .top .logo-footer {
+  height: 100%;
+  background-color: rgb(15, 83, 95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+footer .top .logo-footer {
+  width: 35rem;
+}
+footer .top .logo-footer img {
+  width: 40%;
+}
+footer .top .paginas-footer {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 20rem;
+}
+footer .top .paginas-footer h3 {
+  color: yellow;
+  margin-bottom: 2rem;
+}
+footer .top .paginas-footer a {
+  color: rgb(255, 255, 255);
+  line-height: 1.5;
+}
+footer .top .paginas-footer a:hover {
+  text-decoration: underline;
+}
+footer .top .links-externos {
+  width: 30rem;
+}
+footer .top .links-externos ul {
+  display: flex;
+  gap: 3rem;
+}
+footer .top .links-externos img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: red;
+}
+footer .top .bottom {
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  color: yellow;
 }/*# sourceMappingURL=contato.css.map */
