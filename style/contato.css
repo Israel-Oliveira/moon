@@ -109,7 +109,7 @@ header .menu_excondido ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(247, 247, 247, 0.1098039216);
+    background-color: rgba(0, 0, 0, 0.95);
   }
   header .menu_excondido ul {
     flex-direction: column;
@@ -244,6 +244,26 @@ header .menu_excondido ul li a:hover {
 @keyframes spin {
   100% {
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes zap {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.3);
+    opacity: 0.2;
+  }
+}
+@keyframes zap {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.3);
+    opacity: 0.2;
   }
 }
 .boxAnimation {
@@ -426,6 +446,8 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: absolute;
+  z-index: 10;
 }
 footer .container {
   width: 100%;
@@ -482,10 +504,51 @@ footer .top .links-externos img {
   height: 5rem;
   border-radius: 50%;
   background-color: red;
+  transition: all 0.7ms;
+}
+footer .top .links-externos img:hover {
+  transform: scale(1.2);
+  background-color: rgb(180, 0, 0);
 }
 footer .top .bottom {
   width: 100%;
   height: 10%;
   text-align: center;
   color: yellow;
+}
+footer .botao-flutuante {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .botao-flutuante .fundo-zap {
+  position: absolute;
+  width: 7rem;
+  height: 7rem;
+  background-color: #34af23;
+  border-radius: 50%;
+  -webkit-animation: zap 2s infinite linear;
+          animation: zap 2s infinite linear;
+}
+footer .botao-flutuante .zap {
+  position: relative;
+  width: 7rem;
+  height: 7rem;
+  background-color: #34af23;
+  border-radius: 50%;
+}
+footer .botao-flutuante .zap:hover {
+  cursor: pointer;
+}
+footer .botao-flutuante .zap a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .botao-flutuante .zap img {
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=contato.css.map */

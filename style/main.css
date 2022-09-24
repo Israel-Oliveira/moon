@@ -109,7 +109,7 @@ header .menu_excondido ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(247, 247, 247, 0.1098039216);
+    background-color: rgba(0, 0, 0, 0.95);
   }
   header .menu_excondido ul {
     flex-direction: column;
@@ -246,6 +246,26 @@ header .menu_excondido ul li a:hover {
     transform: rotate(360deg);
   }
 }
+@-webkit-keyframes zap {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.3);
+    opacity: 0.2;
+  }
+}
+@keyframes zap {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.3);
+    opacity: 0.2;
+  }
+}
 #principal .backg-moon {
   background-image: url(../img/backg-main.jpg);
   background-size: cover;
@@ -322,6 +342,7 @@ header .menu_excondido ul li a:hover {
 #secundary {
   background-color: rgb(15, 83, 95);
   width: 100%;
+  padding-bottom: 4rem;
 }
 #secundary .sec-div {
   display: flex;
@@ -358,6 +379,56 @@ header .menu_excondido ul li a:hover {
   color: rgb(255, 255, 255);
 }
 
+#chamadas {
+  background-color: #000;
+  padding: 5rem 1rem;
+}
+#chamadas h2 {
+  color: yellow;
+  font-size: 4rem;
+}
+#chamadas .box-chamadas {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+#chamadas .box-chamadas .chamada {
+  width: 100%;
+  max-width: 22%;
+  margin: 0 auto;
+  border: 3px solid rgba(0, 0, 0, 0);
+  border-radius: 0 20px 0;
+  background: linear-gradient(0deg, white, rgba(255, 255, 255, 0.25), transparent, rgba(255, 255, 255, 0.25), white);
+}
+@media (max-width: 881px) {
+  #chamadas .box-chamadas .chamada {
+    max-width: 48%;
+  }
+}
+@media (max-width: 519px) {
+  #chamadas .box-chamadas .chamada {
+    max-width: 100%;
+  }
+}
+#chamadas .box-chamadas .chamada .text {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  padding: 2rem 1rem;
+  border-radius: 0 20px 0;
+}
+#chamadas .box-chamadas .chamada h3 {
+  color: yellow;
+  margin-bottom: 1rem;
+}
+#chamadas .box-chamadas .chamada p {
+  color: rgb(255, 255, 255);
+}
+
 footer {
   width: 100%;
   background-color: rgb(15, 83, 95);
@@ -367,6 +438,8 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: absolute;
+  z-index: 10;
 }
 footer .container {
   width: 100%;
@@ -423,10 +496,51 @@ footer .top .links-externos img {
   height: 5rem;
   border-radius: 50%;
   background-color: red;
+  transition: all 0.7ms;
+}
+footer .top .links-externos img:hover {
+  transform: scale(1.2);
+  background-color: rgb(180, 0, 0);
 }
 footer .top .bottom {
   width: 100%;
   height: 10%;
   text-align: center;
   color: yellow;
+}
+footer .botao-flutuante {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .botao-flutuante .fundo-zap {
+  position: absolute;
+  width: 7rem;
+  height: 7rem;
+  background-color: #34af23;
+  border-radius: 50%;
+  -webkit-animation: zap 2s infinite linear;
+          animation: zap 2s infinite linear;
+}
+footer .botao-flutuante .zap {
+  position: relative;
+  width: 7rem;
+  height: 7rem;
+  background-color: #34af23;
+  border-radius: 50%;
+}
+footer .botao-flutuante .zap:hover {
+  cursor: pointer;
+}
+footer .botao-flutuante .zap a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .botao-flutuante .zap img {
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=main.css.map */
