@@ -266,167 +266,134 @@ header .menu_excondido ul li a:hover {
     opacity: 0.2;
   }
 }
-#principal .backg-moon {
-  background-image: url(../img/backg-main.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-  background-attachment: fixed;
-  position: relative;
-  z-index: -2;
-  width: 100%;
-  height: 100vh;
-}
-#principal .backg-moon main .box {
-  height: 31.25rem;
-  width: 31.25rem;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  color: white;
-}
-#principal .backg-moon main p.letra {
-  font-size: 3.5rem;
-  position: absolute;
-  transform: translateY(-50%);
-  top: 50%;
-}
-#principal .backg-moon main .letra-m {
-  left: 0.2rem;
-}
-#principal .backg-moon main .letra-n {
-  right: 0.2rem;
-}
-#principal .backg-moon main .moon {
-  background-color: #f5f5f5;
-  height: 8rem;
-  width: 8rem;
-  border-radius: 50%;
-  position: absolute;
+.slider {
+  display: block;
+  height: 500px;
+  width: 500px;
   margin: auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  box-shadow: 0 0 0 0.6rem rgba(255, 255, 255, 0.356), 0 0 0 1.2rem rgba(255, 255, 255, 0.164), 0 0 0 1.8rem rgba(255, 255, 255, 0.137);
-}
-#principal .backg-moon main .moon::after {
-  position: absolute;
-  content: "";
-  background-color: #dfdfdf;
-  height: 0.9rem;
-  width: 0.9rem;
-  border-radius: 50%;
-  top: 3.75rem;
-  left: 1.25rem;
-  box-shadow: 0.9rem -2.1rem 0 0.2rem #dfdfdf, 1.5rem -0.3rem 0 -0.06rem #dfdfdf;
-}
-#principal .backg-moon main .orbit {
-  height: 18.75rem;
-  width: 18.75rem;
-  border-radius: 50%;
-  position: absolute;
-  left: -5.2rem;
-  bottom: -5.2rem;
-  -webkit-animation: spin 8s infinite linear;
-          animation: spin 8s infinite linear;
-}
-#principal .backg-moon main .orbit p {
-  position: absolute;
-  font-size: 3.5rem;
-  top: 0.25rem;
-  left: 0.25rem;
+  /* margin-top: 20px; */
+  position: relative;
 }
 
-#secundary {
-  background-color: rgb(15, 83, 95);
-  width: 100%;
-  padding-bottom: 4rem;
-}
-#secundary .sec-div {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-evenly;
-  padding-inline: 2rem;
-}
-@media (max-width: 60rem) {
-  #secundary .sec-div {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-#secundary .sec-div .lua-div {
-  margin-top: 8rem;
-}
-#secundary .sec-div .lua-div img {
-  max-width: 45rem;
-  width: 100%;
-  filter: drop-shadow(-1rem 0.4rem 0.4rem rgba(255, 255, 255, 0.466));
-}
-#secundary .sec-div .textLua-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  max-width: 50rem;
-}
-#secundary .sec-div .textLua-div h2 {
-  color: yellow;
-  margin-bottom: 2rem;
-}
-#secundary .sec-div .textLua-div p {
-  color: rgb(255, 255, 255);
-}
-
-#chamadas {
-  background-color: #000;
-  padding: 5rem 1rem;
-}
-#chamadas h2 {
-  color: yellow;
-  font-size: 4rem;
-}
-#chamadas .box-chamadas {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 6rem;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-#chamadas .box-chamadas .chamada {
-  width: 100%;
-  max-width: 22%;
-  margin: 0 auto;
-  border: 3px solid rgba(0, 0, 0, 0);
-  border-radius: 0 20px 0;
-  background: linear-gradient(0deg, white, rgba(255, 255, 255, 0.25), transparent, rgba(255, 255, 255, 0.25), white);
-}
-@media (max-width: 881px) {
-  #chamadas .box-chamadas .chamada {
-    max-width: 48%;
-  }
-}
-@media (max-width: 519px) {
-  #chamadas .box-chamadas .chamada {
-    max-width: 100%;
-  }
-}
-#chamadas .box-chamadas .chamada .text {
-  background-color: #000;
+.slider li {
+  list-style: none;
+  position: absolute;
   width: 100%;
   height: 100%;
-  padding: 2rem 1rem;
-  border-radius: 0 20px 0;
 }
-#chamadas .box-chamadas .chamada h3 {
-  color: yellow;
-  margin-bottom: 1rem;
+
+.slider img {
+  margin: auto;
+  width: 100%;
+  vertical-align: bottom;
 }
-#chamadas .box-chamadas .chamada p {
-  color: rgb(255, 255, 255);
+
+.slider input {
+  display: none;
+}
+
+.slider label {
+  background-color: transparent;
+  border: 1px solid rgb(61, 61, 61);
+  color: rgb(61, 61, 61);
+  position: absolute;
+  bottom: 0px;
+  width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
+  cursor: pointer;
+  display: block;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider li:nth-child(1) label {
+  left: 33%;
+}
+
+.slider li:nth-child(2) label {
+  left: 41%;
+}
+
+.slider li:nth-child(3) label {
+  left: 49%;
+}
+
+@media (max-width: 500px) {
+  .slider li:nth-child(1) label {
+    left: 32%;
+  }
+  .slider li:nth-child(2) label {
+    left: 45%;
+  }
+  .slider li:nth-child(3) label {
+    left: 58%;
+  }
+}
+.slider img {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s linear;
+}
+
+.slider li input:checked ~ img {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+
+.slider li input:checked ~ label {
+  border: 1px solid white;
+  color: white;
+}
+
+/* https://www.devmedia.com.br/como-criar-um-slider-com-css-e-html/37787 */
+#galeria {
+  margin-top: 9rem;
+}
+#galeria .cards-imagens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+#galeria .group-card {
+  width: 100%;
+}
+#galeria .card {
+  width: 100%;
+  height: 20rem;
+  border-radius: 3rem;
+  background-image: url("../../teste-slide/terra-2.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+}
+#galeria .card:hover {
+  cursor: pointer;
+  filter: grayscale(50%);
+}
+#galeria .modal-card {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.719);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+#galeria .escondido {
+  display: none;
 }
 
 footer {
@@ -543,4 +510,4 @@ footer .botao-flutuante .zap a {
 footer .botao-flutuante .zap img {
   width: 100%;
   height: 100%;
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=galeria.css.map */

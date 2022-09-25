@@ -1,9 +1,9 @@
-@import './scss/variables';
-@import './scss/config';
+@import '../scss/variables';
+@import '../scss/config';
 
-@import './scss/header';
+@import '../scss/header';
 
-@import './scss/backgroundAnimado';
+@import '../scss/backgroundAnimado';
 
 section{
   margin-top: 10rem;
@@ -186,4 +186,4 @@ section{
   }
 }
 
-@import './scss/footer'
+@import '../scss/footer'

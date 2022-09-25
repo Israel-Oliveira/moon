@@ -1,15 +1,15 @@
 
-@import './scss/variables';
-@import './scss/config';
+@import '../scss/variables';
+@import '../scss/config';
 
-@import './scss/header';
+@import '../scss/header';
 
-@import './scss/animacoes';
+@import '../scss/animacoes';
 
 #principal{
 
   .backg-moon{
-    background-image: url(../img/backg-main.jpg);
+    background-image: url(../../img/backg-main.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -215,4 +215,4 @@
   }
 }
 
-@import './scss/footer';
+@import '../scss/footer';
