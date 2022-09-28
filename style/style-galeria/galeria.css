@@ -351,13 +351,42 @@ header .menu_excondido ul li a:hover {
 
 /* https://www.devmedia.com.br/como-criar-um-slider-com-css-e-html/37787 */
 #galeria {
-  margin-top: 9rem;
+  margin-top: 13rem;
+}
+#galeria h1 {
+  color: yellow;
+  display: block;
+  margin-bottom: 5rem;
+  margin-left: 7rem;
+  font-size: 4rem;
+}
+#galeria h2 {
+  color: yellow;
 }
 #galeria .cards-imagens {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   width: 100%;
+  padding-inline: 2rem;
+}
+#galeria .cards-imagens .group-card:nth-child(2) .card {
+  background-image: url(../../img/planetas/marte-1.jpg);
+}
+#galeria .cards-imagens .group-card:nth-child(3) .card {
+  background-image: url(../../img/planetas/jupter-1.jpg);
+}
+#galeria .cards-imagens .group-card:nth-child(4) .card {
+  background-image: url(../../img/planetas/mercurio-1.jpg);
+}
+#galeria .cards-imagens .group-card:nth-child(5) .card {
+  background-image: url(../../img/planetas/saturno-1.jpg);
+}
+#galeria .cards-imagens .group-card:nth-child(6) .card {
+  background-image: url(../../img/planetas/venus-1.jpg);
+}
+#galeria .cards-imagens .group-card:nth-child(2) .card {
+  background-image: url(../../img/planetas/marte-1.jpg);
 }
 #galeria .group-card {
   width: 100%;
@@ -366,7 +395,7 @@ header .menu_excondido ul li a:hover {
   width: 100%;
   height: 20rem;
   border-radius: 3rem;
-  background-image: url("../../teste-slide/terra-2.jpg");
+  background-image: url(../../img/planetas/terra-2.jpg);
   background-position: center;
   background-size: cover;
   display: flex;

@@ -5,14 +5,51 @@
 @import '../scss/slider';
 
 #galeria{
-  margin-top: 9rem;
+  margin-top: 13rem;
 
+  h1{
+    color: $txtY;
+    display: block;
+
+    margin-bottom: 5rem;
+    margin-left: 7rem;
+    font-size: 4rem;
+  }
+
+  h2{
+    color: $txtY;
+  }
   .cards-imagens{
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
 
     width: 100%;
+    padding-inline: 2rem;
+
+    .group-card:nth-child(2) .card{
+      background-image: url(../../img/planetas/marte-1.jpg);
+    }
+
+    .group-card:nth-child(3) .card{
+      background-image: url(../../img/planetas/jupter-1.jpg);
+    }
+
+    .group-card:nth-child(4) .card{
+      background-image: url(../../img/planetas/mercurio-1.jpg);
+    }
+
+    .group-card:nth-child(5) .card{
+      background-image: url(../../img/planetas/saturno-1.jpg);
+    }
+
+    .group-card:nth-child(6) .card{
+      background-image: url(../../img/planetas/venus-1.jpg);
+    }
+
+    .group-card:nth-child(2) .card{
+      background-image: url(../../img/planetas/marte-1.jpg);
+    }
   }
 
   .group-card{
@@ -24,7 +61,7 @@
 
     border-radius: 3rem;
 
-    background-image: url('../../teste-slide/terra-2.jpg');
+    background-image: url(../../img/planetas/terra-2.jpg);
     background-position: center;
     background-size: cover;
 

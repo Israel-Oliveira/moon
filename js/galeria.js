@@ -1,37 +1,28 @@
 
 var modals = document.querySelectorAll('.group-card .modal-card')
-const modal = document.querySelector('.modal-card');
-
-
 var itens = document.querySelectorAll('.group-card .card');
+var chek = document.querySelectorAll('.group-card .modal-card input')
 
 
-
-for(var i=0; i<itens.length;i++){
-  itens[i].addEventListener("click", () =>{
-    modal.classList.toggle('escondido')
+function cardss(posicao){
+  itens[posicao].addEventListener("click", () =>{
+    modals[posicao].classList.toggle('escondido')
   })
 
-  modals[i].addEventListener("click", () =>{
-    modal.classList.toggle('escondido')
+  modals[posicao].addEventListener("click", () =>{
+    modals[posicao].classList.toggle('escondido')
   })
 }
 
-// for(var z=0; z<itens.length;z++){
-//   modals[z].addEventListener("click", () =>{
-//     modal.classList.toggle('escondido')
-//   })
-// }
+for(var i = 0; i < itens.length;i++){
+  cardss(i)
+}
 
 
+for(var c = 0; c < chek.length;c = c+3){
+  chek[c].checked = true
+}
 
 
-// card.addEventListener("click", () =>{
-//   modal.classList.toggle('escondido')
-// })
-
-// modal.addEventListener("click", () =>{
-//   modal.classList.toggle('escondido')
-// })
-
+  
 
