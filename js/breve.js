@@ -5,7 +5,7 @@ texto.addEventListener("mouseenter", ()=>{
   texto.style.color = "rgb(15, 154, 179)"
   texto.innerHTML = "Voltar"
 
-  link.href = "../"
+  link.href = "../moon/"
 })
 
 texto.addEventListener("mouseout", ()=>{
